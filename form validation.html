@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+        <script>
+
+        function myfun()
+        {
+            var data1 = document.getElementById("one").value;
+            var data2 = document.getElementById("two").value;
+            var data3 = document.getElementById("three").value;
+            var data4 = document.getElementById("four1").checked;
+            var data5 = document.getElementById("four2").checked;
+            var data6 = document.getElementById("five").value;
+            var data7 = document.getElementById("six").value;
+            var data8 = document.getElementById("seven").value;
+            var data9 = document.getElementById("eight").checked;
+            var data91 = document.getElementById("eight1").checked;
+            var data92 = document.getElementById("eight2").checked;
+            var data93 = document.getElementById("eight3").checked;
+            var data94 = document.getElementById("eight4").checked;
+            var data95 = document.getElementById("eight5").checked;
+            var data10 = document.getElementById("nine").value;
+            var data11 = document.getElementById("ten").value;
+           
+
+            if(data1 == "")
+            {
+                document.getElementById("a1").style.color="red";
+                document.getElementById("a1").innerHTML= "*Name is Missing ";
+            
+            }
+            else
+            {
+                document.getElementById("a1").style.color="green";
+                document.getElementById("a1").innerHTML= "* data vaild ";
+            }
+            if(data2 == "")
+            {
+                document.getElementById("a2").style.color="red";
+                document.getElementById("a2").innerHTML= "*Email is Missing ";
+            
+            }
+            else
+            {
+                document.getElementById("a2").style.color="green";
+                document.getElementById("a2").innerHTML= "* data vaild ";
+            }
+            if(data3 == "")
+            {
+                document.getElementById("a3").style.color="red";
+                document.getElementById("a3").innerHTML= "*Number is Missing ";
+            
+            }
+            else
+            {
+                document.getElementById("a3").style.color="green";
+                document.getElementById("a3").innerHTML= "* data vaild ";
+            }
+            if(data4 == true || data5  == true)
+            {
+                document.getElementById("a4").style.color="green";
+                document.getElementById("a4").innerHTML= "*data valid ";
+                
+            }
+            else
+            {
+                document.getElementById("a4").style.color="red";
+                document.getElementById("a4").innerHTML= "*gender is Missing  ";
+            }
+            if(data6 =="" )
+            {
+                document.getElementById("a5").style.color="red";
+                document.getElementById("a5").innerHTML= "*Qulification is Missing ";
+            
+            }
+            else
+            {
+                document.getElementById("a5").style.color="green";
+                document.getElementById("a5").innerHTML= "* data vaild ";
+            }
+            if(data7 == "")
+            {
+                document.getElementById("a6").style.color="red";
+                document.getElementById("a6").innerHTML= "*Branch is Missing ";
+            
+            }
+            else
+            {
+                document.getElementById("a6").style.color="green";
+                document.getElementById("a6").innerHTML= "* data vaild ";
+            }
+            if(data8 == "")
+            {
+                document.getElementById("a7").style.color="red";
+                document.getElementById("a7").innerHTML= "* percentage is Missing ";
+            
+            }
+            else
+            {
+                document.getElementById("a7").style.color="green";
+                document.getElementById("a7").innerHTML= "* data vaild ";
+            }
+            if(data9 == true || data91 == true || data92 == true || data93 == true || data94 == true || data95 == true)
+            {
+                document.getElementById("a8").style.color="green";
+                document.getElementById("a8").innerHTML= "* data vaild ";
+            
+            }
+            else
+            {
+                document.getElementById("a8").style.color="red";
+                document.getElementById("a8").innerHTML= "* Skills is Missing  ";
+            }
+            if(data10 == "")
+            {
+                document.getElementById("a9").style.color="red";
+                document.getElementById("a9").innerHTML= "* Year of Passout is Missing ";
+            
+            }
+            else
+            {
+                document.getElementById("a9").style.color="green";
+                document.getElementById("a9").innerHTML= "* data vaild ";
+            }
+            if(data11 == "")
+            {
+                document.getElementById("a10").style.color="red";
+                document.getElementById("a10").innerHTML= "* File is Missing ";
+            
+            }
+            else
+            {
+                document.getElementById("a10").style.color="green";
+                document.getElementById("a10").innerHTML= "* data vaild ";
+            }
+         
+    
+        }
+    </script>
+    <style>
+        #c2{
+            width: 500px;
+            height: 800px;
+            border: 5px inset black;
+            margin:auto;
+            margin-top: 50px;
+            background-color:palegoldenrod;
+        }
+        #c1{
+            margin: right;
+            margin-left: 50px;
+            
+        }
+       
+    
+        
+    </style>
+</head>
+<body style="background-color: lightblue;">
+    
+        <div id="c2">
+            <div id="c1">
+                <br>
+                <h1 style="text-align: center;"><i><u>FORM VALIDATION</u></i></h1>
+                <span id="a1"></span><br>
+                Full Name :<br>
+                <input type="text" placeholder="Enter full name" id="one" style="width: 300px;"><br>
+                <span id="a2"></span><br>
+                Email Address:<br>
+                <input type="text" placeholder="Enter Email" id="two" style="width: 300px;"><br>
+                <span id="a3"></span><br>
+                Phone Number :<br>
+                <input type="text" id="three" style="width: 300px;"><br>
+                <span id="a4"></span><br>
+                Gender:<br>
+                    <input type="radio" name="r1"  value="male" id="four1" >male
+                    <input type="radio" name="r1"  value="female" id="four2">female<br>
+                <span id="a5"></span><br>
+                Qualification:<br>
+                <select name="five" id="five" style="width: 300px;">
+                    <option value="">......Select......</option>
+                    <option value="btech">B.tech</option>
+                    <option value="be">M.TECH</option>
+                    <option value="mtech">M.E</option>
+                    <option value="msc">M.B.A</option>
+                    <option value="mca">M.C.A</option>
+                    <option value="ms">M.S</option>
+                </select><br><br>
+                <span id="a6"></span><br>
+                Branch:<br>
+                <select name="six" id="six" style="width: 300px;">
+                    <option value="">......Select......</option>
+                    <option value="CSE">CSE</option>
+                    <option value="EEE">EEE</option>
+                    <option value="MECH">MECHANICAL</option>
+                    <option value="ECE">ECE</option>
+                    <option value="CIVIL">CIVIL</option>
+                    <option value="IT">IT</option>
+                    <option value="other">Other</option>
+                </select><br><br>
+                <span id="a7"></span><br>
+                percentage:<br>
+                <input type="number" id="seven" style="width: 300px;"><br>
+                <span id="a9"></span><br>
+                Year of Passout:<br>
+                <input type="date"  id="nine" style="width: 300px;"><br>
+                <span id="a8"></span><br>
+                you certified/skills:<br>
+                <input type="checkbox" name="b1" value="python" id="eight">java
+                <input type="checkbox" name="b1" value="java" id="eight1">python
+                <input type="checkbox" name="b1" value="javascript" id="eight2">oracle
+                <input type="checkbox" name="b1" value="c" id="eight3">javascript
+                <input type="checkbox" name="b1" value="c++" id="eight4">c
+                <input type="checkbox" name="b1" value="html" id="eight5">c++<br>
+                <span id="a10"></span><br>
+                Upload CV/Resume(s):<br>
+                <input type="file" id="ten"><br>
+                <br>
+                <button onclick="myfun();">submit</button><br>
+            
+            </div>
+        </div>
+        <br><br>
+
+       
+
+</head>
+<body>
+    
+</body>
+</html>

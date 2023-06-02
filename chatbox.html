@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>chat Box</title>
+    <style>
+        #one {
+            width: 50%;
+            height: 350px;
+            background-color: aquamarine;
+            margin-left: auto;
+            margin-right: auto;
+            overflow: auto;
+            text-overflow: ellipsis;
+        }
+
+        #two {
+            float: left;
+            margin-left: auto;
+            width: 250px;
+            height: 450px;
+        }
+
+        #three {
+            float: left;
+            margin-left: 0px;
+            margin-top: 0px;
+            float: right;
+            width: 250px;
+            height: 450px;
+        }
+
+        #submit {
+            background-color: green;
+            color: white;
+            width: 240px;
+            height: 30px;
+        }
+
+        #close {
+            background-color: red;
+            color: white;
+            width: 240px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Welcome to Chat Section</h1><br>
+    <div id="one"></div>
+    <div id="two">
+        <h2>User</h2>
+        <form>
+            <label>
+                <h1></h1>Message</h1>
+            </label><br>
+            <textarea id="text1" value="" rows="8" cols="30" placeholder="Message"></textarea>
+
+            <br>
+            <input id="submit" type="submit" value="Send" onclick="user(event);"><br><br>
+            <input id="close" type="submit" value="Close">
+        </form>
+    </div>
+    <div id="three">
+        <h2>Admin</h2>
+        <form>
+            <label>Message</label><br>
+            <textarea id="text2" rows="8" cols="30" placeholder="Message"></textarea>
+
+            <br>
+            <input id="submit" type="submit" value="Send" onclick="admin(event);"><br><br>
+            <input id="close" type="submit" value="Close">
+        </form>
+    </div>
+    <script>
+        function user() {
+
+            event.preventDefault();
+            var data1 = document.getElementById("text1").value;
+            console.log(data1);
+            // document.getElementById("one").innerHTML += "User : "+data1+"<br>";
+            document.getElementById("one").innerHTML += "<span style='color:red;font-size:40px';>User : " + data1 +
+                "<br>";
+            document.getElementById("text1").value = "";
+        }
+
+        function admin() {
+            event.preventDefault();
+            var data2 = document.getElementById("text2").value;
+            console.log(data2);
+            // document.getElementById("one").innerHTML += "&nbsp&nbsp&nbsp&nbsp&nbspAdmin : "+data2+"<br>";
+            document.getElementById("one").innerHTML +=
+                "<span style='color:black; font-size:40px;margin-left:200px'>admin : " + data2 + "<br>";
+
+            document.getElementById("text2").value = "";
+
+        }
+    </script>
+
+
+</body>
+
+</html>
